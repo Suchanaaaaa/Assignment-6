@@ -8,7 +8,7 @@ import {
   Check,
   Clock3,
   Flame,
-  Plus,
+  CalendarPlus,
   Star,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -125,7 +125,7 @@ export default function WorkoutDetailClient({ id }: { id: string }) {
               disabled={inPlan || plan.length >= 5}
               className="flex items-center justify-center gap-2 rounded-xl bg-[#ccff00] px-4 py-3 text-xs font-black text-black disabled:cursor-not-allowed disabled:opacity-40"
             >
-              {inPlan ? <Check size={16} /> : <Plus size={16} />}
+              {inPlan ? <Check size={16} /> : < CalendarPlus size={16} />}
               {inPlan
                 ? 'In today’s plan'
                 : plan.length >= 5
