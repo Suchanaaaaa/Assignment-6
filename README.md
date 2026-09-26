@@ -1,68 +1,125 @@
-# 💪 FitLog — Workout Library
+# 💪 FitLog - Workout Library
 
-
-## 📖 About
-
-**FitLog** is a responsive, dark-mode workout library built from the Programming Hero B14-A6 *Fit Log* brief. Browse a curated exercise library, open detailed workout pages with step-by-step instructions, build a five-lift daily plan, save workouts for later, and track your completed lifts — all in one clean, no-nonsense interface.
-
-The app fetches live data from the API and gracefully falls back to a bundled 12-workout dataset if the API is temporarily unavailable, so the experience never breaks.
-
-🔗 **Live demo:** [fitlog-sooty.vercel.app](https://fitlog-sooty.vercel.app/)
+FitLog is a modern workout library and fitness planning web application built with Next.js. Users can browse exercises, view workout details, add workouts to today's plan, save workouts for later, and track their daily fitness routine through a clean and responsive interface.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Live Features
 
-| Category | Technology |
-|---|---|
-| Framework | Next.js (App Router) |
-| Language | TypeScript |
-| UI Library | React 19 |
-| Styling | Tailwind CSS |
-| Icons | Lucide React |
-| Persistence | LocalStorage (plan & saved data) |
-| Deployment | Vercel |
+- Browse a collection of workouts from an external API
+- View detailed workout information including equipment, duration, calories, rating, sets, reps, and instructions
+- Add workouts to Today's Plan
+- Save workouts for later
+- Track total exercises, duration, and calories in My Plan
+- Mark workouts as completed
+- Remove workouts from the plan
+- Sort workouts by Duration, Calories, and Rating
+- Fully responsive design for mobile, tablet, and desktop
+- Toast notifications for user actions
+- Custom 404 page for invalid routes
+
+---
+
+## 🛠️ Technologies Used
+
+- **Next.js 15**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Lucide React Icons**
+- **React Context API**
+- **Local Storage**
+- **Vercel Deployment**
 
 ---
 
 ## ✨ Key Features
 
-1. **🏋️ Responsive Workout Library** — Loading states and a clean 3-column desktop grid that adapts down to mobile.
-2. **📋 Detailed Workout Pages** — Full specs (equipment, difficulty, sets, reps, duration, calories), step-by-step instructions, and hero imagery.
-3. **📅 Today's Plan** — Build a plan with a 5-lift cap, live exercise/minute/calorie totals, and per-lift completion tracking.
-4. **🔖 Saved Workouts** — Bookmark workouts for later with data that persists across sessions via localStorage.
-5. **🔍 Sort & Search** — Filter and sort the library by duration, calories, or rating, and search by workout name or muscle tag.
+### 1. Workout Library
+Display all workouts from the API in a responsive card layout with workout image, muscle groups, equipment, duration, calories, and rating.
+
+### 2. Workout Details Page
+Provides complete workout information including specifications, instructions, difficulty level, sets, reps, and action buttons.
+
+### 3. Today's Plan Management
+Users can add workouts to their daily plan, monitor progress, mark workouts as done, and remove them when needed.
+
+### 4. Save for Later
+Users can save workouts separately and access them anytime from the My Plan page.
+
+### 5. Dynamic Statistics
+Automatically calculates and updates total exercises, workout duration, and calories burned based on the current plan.
 
 ---
 
-## 🎁 Extras
+## 📂 Project Structure
 
-- 🔔 Toast notifications for add, save, complete, and remove actions
-- 🚫 Custom 404 page with deployment-safe App Router routing
-- 📱 Fully responsive navigation, hero section, footer, and workout cards
-
----
-
-## 📁 Project Structure
-
-├── app/                # App Router pages & routes
-├── components/         # Reusable UI components
-├── context/             # FitLog context (plan/saved state)
-├── lib/                 # Data fetching & fallback dataset
-├── design/              # Supplied Figma & Penpot design files
-└── public/assets/       # Logo, banner, and other static assets
-
-> The supplied **Figma** and **Penpot** design files are kept under `design/`, and the supplied logo/banner assets live under `public/assets/`.
+```bash
+app/
+components/
+context/
+lib/
+public/
+```
 
 ---
 
-## 🚀 Getting Started
+## 📦 Installation
 
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Install dependencies:
+
+```bash
 npm install
-npm run dev
+```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Run development server:
+
+```bash
+npm run dev
+```
+
+Build project:
+
+```bash
+npm run build
+```
+
+Start production server:
+
+```bash
+npm start
+```
 
 ---
 
-<p align="center">Built with 💛 as part of the Programming Hero B14-A6 curriculum.</p>
+## 🔗 API Used
+
+### All Workouts
+
+```bash
+https://api.abcz.workers.dev/api/fitlog
+```
+
+### Single Workout Details
+
+```bash
+https://api.abcz.workers.dev/api/fitlog/:id
+```
+
+---
+
+## 👨‍💻 Developer
+
+Developed as part of the Programming Hero Assignment - FitLog Workout Library.
+
+---
+
+## © Copyright
+
+© 2026 FitLog — Workout Library. Train hard, log honest.
