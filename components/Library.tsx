@@ -48,7 +48,7 @@ export default function Library({ workouts }: LibraryProps) {
       id="library"
       className="px-4 py-16 sm:px-6 lg:px-8"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto  max-w-[1500px]">
         {/* Section Header */}
         <div className="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
@@ -94,7 +94,7 @@ export default function Library({ workouts }: LibraryProps) {
         </div>
 
         {/* Workout Grid */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid  grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {sortedWorkouts.map((workout) => (
             <Link
               key={workout.id}
@@ -103,7 +103,7 @@ export default function Library({ workouts }: LibraryProps) {
             >
               <article className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
                 {/* Image */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-zinc-900">
+                <div className="relative h-[260px] overflow-hidden bg-zinc-900">
                   <img
                     src={workout.image}
                     alt={workout.name}
@@ -138,22 +138,22 @@ export default function Library({ workouts }: LibraryProps) {
                   </p>
 
                   {/* Stats */}
-                  <div className="mt-5 grid grid-cols-3 border-t border-zinc-800 pt-4">
-                    <div className="flex items-center gap-1.5 text-xs text-[#ccff00]">
-                      <Clock3 size={14} />
-                      <span className="text-zinc-300">{workout.duration} min</span>
-                    </div>
+                  <div className="mt-5 grid grid-cols-3 items-center border-t border-zinc-800 pt-4">
+                 <div className="flex items-center justify-start gap-1.5 text-xs text-[#ccff00]">
+                 <Clock3 size={14} />
+                 <span className="text-zinc-300">{workout.duration} min</span>
+                </div>
 
-                    <div className="flex items-center gap-1.5 text-xs text-[#ccff00]">
-                      <Flame size={14} />
-                      <span className="text-zinc-300">{workout.caloriesBurned} kcal</span>
-                    </div>
+                <div className="flex items-center justify-center gap-1.5 text-xs text-[#ccff00]">
+               <Flame size={14} />
+               <span className="text-zinc-300">{workout.caloriesBurned} kcal</span>
+               </div>
 
-                    <div className="flex items-center justify-end gap-1.5 text-xs text-[#ccff00]">
-                      <Star size={14} />
-                      <span className="text-zinc-300">{workout.rating}</span>
-                    </div>
-                  </div>
+              <div className="flex items-center justify-end gap-1.5 text-xs text-[#ccff00]">
+             <Star size={14} />
+              <span className="text-zinc-300">{workout.rating}</span>
+              </div>
+               </div>
                 </div>
               </article>
             </Link>
