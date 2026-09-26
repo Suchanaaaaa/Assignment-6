@@ -103,7 +103,7 @@ export default function Library({ workouts }: LibraryProps) {
             >
               <article className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
                 {/* Image */}
-                <div className="relative h-[220px] overflow-hidden bg-zinc-900">
+                <div className="relative h-[200px] overflow-hidden bg-zinc-900">
                   <img
                     src={workout.image}
                     alt={workout.name}
