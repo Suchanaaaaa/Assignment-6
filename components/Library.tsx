@@ -48,7 +48,7 @@ export default function Library({ workouts }: LibraryProps) {
       id="library"
       className="px-4 py-16 sm:px-6 lg:px-8"
     >
-      <div className="mx-auto  max-w-[1500px]">
+      <div className="mx-auto  max-w-[1280px]">
         {/* Section Header */}
         <div className="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
@@ -103,7 +103,7 @@ export default function Library({ workouts }: LibraryProps) {
             >
               <article className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
                 {/* Image */}
-                <div className="relative h-[260px] overflow-hidden bg-zinc-900">
+                <div className="relative h-[220px] overflow-hidden bg-zinc-900">
                   <img
                     src={workout.image}
                     alt={workout.name}
@@ -112,7 +112,7 @@ export default function Library({ workouts }: LibraryProps) {
                 </div>
 
                 {/* Content */}
-                <div className="p-5">
+                <div className="p-4">
                   {/* Category Tags */}
                   <div className="mb-3 flex flex-wrap gap-2">
                     {workout.muscleGroups.map((muscle) => (
