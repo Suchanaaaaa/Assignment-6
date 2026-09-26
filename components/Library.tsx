@@ -46,7 +46,7 @@ export default function Library({ workouts }: LibraryProps) {
   return (
     <section
       id="library"
-      className="px-4 py-16 sm:px-6 lg:px-8"
+      className="px-4 pt-16 pb-2 sm:px-6 lg:px-8"
     >
       <div className="mx-auto  max-w-[1200px]">
         {/* Section Header */}
